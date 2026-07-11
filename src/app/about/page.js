@@ -25,22 +25,6 @@ export default function About() {
         </div>
       </section>
 
-      <section className={styles.team}>
-        <h2 className="headline-secondary">The Directors</h2>
-        <div className={styles.teamGrid}>
-          <div className={styles.teamMember}>
-            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&auto=format" alt="Director 1" referrerPolicy="no-referrer" />
-            <h3>Omar Khufu</h3>
-            <span className={styles.role}>Head of Curation</span>
-          </div>
-          <div className={styles.teamMember}>
-            <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=800&auto=format" alt="Director 2" referrerPolicy="no-referrer" />
-            <h3>Laila Mimar</h3>
-            <span className={styles.role}>Architectural Liaison</span>
-          </div>
-        </div>
-      </section>
-
       <section className={styles.contact}>
         <div className={styles.contactBox}>
           <h2 className="headline-secondary">Begin a Dialogue</h2>
