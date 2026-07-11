@@ -52,6 +52,7 @@ export default function Navigation() {
           <button onClick={() => setSearchOpen(true)} className={styles.navBtn} data-interactive="true">
             <Search size={14} className={styles.navIcon} /> SEARCH
           </button>
+          <Link href="/about" data-interactive="true">ABOUT US</Link>
           <Link href="/#collections" data-interactive="true">COLLECTIONS</Link>
           <Link href="/list" data-interactive="true" className={styles.highlightLink}>LIST SPACE</Link>
           <button onClick={() => setAuthOpen(true)} className={styles.navBtn} data-interactive="true">
