@@ -1,0 +1,63 @@
+:root {
+  --color-alabaster: #FDFBF7;
+  --color-khufu-stone: #E6DFD3;
+  --color-nile-mud: #2C2A27;
+  --color-royal-umber: #1A1917;
+  --color-oasis-dawn: #C5A059;
+
+  --font-primary: 'Cormorant Garamond', serif;
+  --font-secondary: 'Plus Jakarta Sans', sans-serif;
+  
+  --spacing-unit: 8px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  background-color: var(--color-alabaster);
+  color: var(--color-royal-umber);
+  font-family: var(--font-secondary);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+  cursor: none; /* Hide default cursor to use custom kinetic cursor */
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-primary);
+  font-weight: 400;
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  cursor: none; /* Custom cursor applies here too */
+}
+
+/* Micro-interaction skeletons & generic utilities */
+.structural-line {
+  border-bottom: 0.5px solid var(--color-khufu-stone);
+}
+
+.structural-line-vertical {
+  border-right: 0.5px solid var(--color-khufu-stone);
+}
+
+.editorial-text {
+  text-align: justify;
+  line-height: 1.6;
+}
+
+/* Custom Selection Color */
+::selection {
+  background-color: var(--color-nile-mud);
+  color: var(--color-alabaster);
+}

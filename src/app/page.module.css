@@ -1,0 +1,241 @@
+.main {
+  width: 100%;
+}
+
+/* 1. Hero Section */
+.heroSection {
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+  overflow: hidden;
+}
+
+.videoWrapper {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.heroVideo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: scale(1.05);
+}
+
+.videoOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, rgba(26,25,23,0.3) 0%, rgba(26,25,23,0.7) 100%);
+  z-index: 1;
+}
+
+.ticker {
+  position: absolute;
+  bottom: 48px;
+  left: 64px;
+  z-index: 2;
+  font-family: var(--font-secondary);
+  font-size: 11px;
+  color: var(--color-alabaster);
+  letter-spacing: 2px;
+  mix-blend-mode: difference;
+}
+
+/* 2. The Reveal */
+.revealSection {
+  padding: 180px 64px;
+  background-color: var(--color-alabaster);
+  border-bottom: 0.5px solid var(--color-khufu-stone);
+}
+
+.editorialGrid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 80px;
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+.headline {
+  font-size: 56px;
+  line-height: 1.1;
+  color: var(--color-royal-umber);
+}
+
+.editorialRight {
+  padding-top: 24px;
+}
+
+.editorialRight p {
+  color: var(--color-nile-mud);
+  line-height: 1.6;
+  max-width: 800px;
+}
+
+.partners {
+  padding: 160px 80px;
+  background-color: var(--color-khufu-stone);
+}
+
+.partners h2 {
+  font-family: var(--font-primary);
+  font-size: 56px;
+  color: var(--color-royal-umber);
+  margin-bottom: 64px;
+}
+
+.partnerGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.partnerCard {
+  background-color: var(--color-alabaster);
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  border: 0.5px solid transparent;
+  transition: border-color 0.4s;
+  cursor: none;
+}
+
+.partnerCard:hover {
+  border-color: var(--color-royal-umber);
+}
+
+.partnerCard .meta {
+  font-family: var(--font-secondary);
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--color-oasis-dawn);
+}
+
+.partnerCard h3 {
+  font-family: var(--font-primary);
+  font-size: 24px;
+  color: var(--color-royal-umber);
+}
+
+.partnerCard p {
+  font-family: var(--font-secondary);
+  font-size: 13px;
+  color: var(--color-nile-mud);
+  line-height: 1.6;
+}
+
+/* 3. Collections */
+.collectionsSection {
+  padding: 120px 64px;
+  background-color: var(--color-alabaster);
+}
+
+.sectionHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 80px;
+  border-bottom: 0.5px solid var(--color-khufu-stone);
+  padding-bottom: 24px;
+}
+
+.sectionHeader h2 {
+  font-size: 36px;
+  color: var(--color-royal-umber);
+}
+
+.sectionMeta {
+  font-family: var(--font-secondary);
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: var(--color-nile-mud);
+}
+
+.propertiesGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+/* 4. Atlas Section */
+.atlasSection {
+  padding: 120px 64px;
+  background-color: var(--color-alabaster);
+}
+
+.atlasContainer {
+  width: 100%;
+  height: 70vh;
+  position: relative;
+  border: 0.5px solid var(--color-khufu-stone);
+  overflow: hidden;
+  background-color: var(--color-alabaster);
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+.atlasCanvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.atlasUI {
+  position: absolute;
+  bottom: 40px;
+  left: 40px;
+  z-index: 10;
+  pointer-events: none;
+}
+
+.atlasPanel {
+  background-color: rgba(253, 251, 247, 0.9);
+  backdrop-filter: blur(10px);
+  border: 0.5px solid var(--color-khufu-stone);
+  padding: 24px;
+  width: 280px;
+}
+
+.atlasPanel h3 {
+  font-family: var(--font-secondary);
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--color-nile-mud);
+  margin-bottom: 16px;
+  border-bottom: 0.5px solid var(--color-khufu-stone);
+  padding-bottom: 8px;
+}
+
+.dataList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.dataList li {
+  font-family: var(--font-secondary);
+  font-size: 12px;
+  color: var(--color-royal-umber);
+  margin-bottom: 8px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.dataList li span {
+  color: var(--color-nile-mud);
+  opacity: 0.6;
+}

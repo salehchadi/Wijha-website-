@@ -1,0 +1,122 @@
+.container {
+  display: grid;
+  grid-template-columns: 45% 55%;
+  min-height: 100vh;
+  background-color: var(--color-alabaster);
+  border-top: 0.5px solid var(--color-khufu-stone);
+}
+
+.editorialLeft {
+  border-right: 0.5px solid var(--color-khufu-stone);
+  padding: 160px 80px;
+  position: relative;
+}
+
+.stickyContent {
+  position: sticky;
+  top: 160px;
+}
+
+.meta {
+  font-family: var(--font-secondary);
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--color-nile-mud);
+  display: block;
+  margin-bottom: 24px;
+}
+
+.headline {
+  font-family: var(--font-primary);
+  font-size: 56px;
+  color: var(--color-royal-umber);
+  line-height: 1.1;
+  margin-bottom: 32px;
+}
+
+.formRight {
+  padding: 160px 80px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  max-width: 600px;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.formGroup label {
+  font-family: var(--font-secondary);
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: var(--color-nile-mud);
+  opacity: 0.7;
+}
+
+.formGroup input, .formGroup textarea {
+  width: 100%;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid var(--color-khufu-stone);
+  padding: 16px 0;
+  font-family: var(--font-secondary);
+  font-size: 14px;
+  outline: none;
+  color: var(--color-royal-umber);
+  transition: border-color 0.3s;
+}
+
+.formGroup textarea {
+  resize: none;
+  line-height: 1.6;
+}
+
+.formGroup input:focus, .formGroup textarea:focus {
+  border-bottom-color: var(--color-nile-mud);
+}
+
+.submitBtn {
+  align-self: flex-start;
+  margin-top: 16px;
+  background-color: var(--color-nile-mud);
+  color: var(--color-alabaster);
+  border: none;
+  padding: 20px 40px;
+  font-family: var(--font-secondary);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 12px;
+  transition: background-color 0.3s;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.submitBtn:hover {
+  background-color: var(--color-oasis-dawn);
+}
+
+.successMessage {
+  padding: 64px;
+  background-color: rgba(253, 251, 247, 0.5);
+  border: 0.5px solid var(--color-khufu-stone);
+}
+
+.successMessage h2 {
+  font-family: var(--font-primary);
+  font-size: 32px;
+  margin-bottom: 16px;
+}

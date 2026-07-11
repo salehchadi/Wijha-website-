@@ -1,0 +1,276 @@
+.dossier {
+  display: grid;
+  grid-template-columns: 45% 55%;
+  min-height: 100vh;
+  background-color: var(--color-alabaster);
+}
+
+.leftPane {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  border-right: 0.5px solid var(--color-khufu-stone);
+}
+
+.blueprintWrapper {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.blueprintImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: grayscale(100%) contrast(120%);
+}
+
+.blueprintOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(253, 251, 247, 0.4);
+  mix-blend-mode: screen;
+}
+
+.rightPane {
+  padding: 160px 80px 80px 80px;
+  overflow-y: auto;
+}
+
+.content {
+  max-width: 800px;
+}
+
+.header {
+  margin-bottom: 64px;
+}
+
+.meta {
+  font-family: var(--font-secondary);
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--color-nile-mud);
+  display: block;
+  margin-bottom: 16px;
+}
+
+.title {
+  font-family: var(--font-primary);
+  font-size: 56px;
+  color: var(--color-royal-umber);
+  line-height: 1.1;
+}
+
+.narrative {
+  margin-bottom: 80px;
+}
+
+.narrative p {
+  font-size: 18px;
+  color: var(--color-nile-mud);
+}
+
+.sectionTitle {
+  font-family: var(--font-secondary);
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--color-nile-mud);
+  margin-bottom: 32px;
+  border-bottom: 0.5px solid var(--color-khufu-stone);
+  padding-bottom: 16px;
+}
+
+.simulationSection {
+  margin-bottom: 80px;
+}
+
+.simulationFrame {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  border: 0.5px solid var(--color-khufu-stone);
+  margin-bottom: 32px;
+}
+
+.simImg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity 0.1s linear;
+}
+
+.sliderControl {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.timeLabel {
+  font-family: var(--font-secondary);
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--color-nile-mud);
+}
+
+.slider {
+  flex: 1;
+  -webkit-appearance: none;
+  appearance: none;
+  height: 1px;
+  background: var(--color-khufu-stone);
+  outline: none;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--color-oasis-dawn);
+  cursor: pointer;
+}
+
+.specsTable {
+  display: flex;
+  flex-direction: column;
+}
+
+.specRow {
+  display: flex;
+  border-bottom: 0.5px solid var(--color-khufu-stone);
+}
+
+.specKey {
+  width: 40%;
+  padding: 16px 0;
+  font-family: var(--font-secondary);
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--color-nile-mud);
+  opacity: 0.7;
+}
+
+.specValue {
+  width: 60%;
+  padding: 16px 0;
+  font-family: var(--font-secondary);
+  font-size: 13px;
+  color: var(--color-royal-umber);
+}
+
+.financialSection {
+  margin-top: 80px;
+}
+
+.calculator {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  background-color: transparent;
+  border: 0.5px solid var(--color-khufu-stone);
+  padding: 40px;
+}
+
+.calcHeader {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 0.5px solid var(--color-khufu-stone);
+  padding-bottom: 24px;
+}
+
+.priceTotal {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.calcLabel {
+  font-family: var(--font-secondary);
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--color-nile-mud);
+  opacity: 0.7;
+}
+
+.priceValue {
+  font-family: var(--font-primary);
+  font-size: 32px;
+  color: var(--color-royal-umber);
+}
+
+.calcControls {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.calcGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.calcRow {
+  display: flex;
+  justify-content: space-between;
+}
+
+.calcAmount {
+  font-family: var(--font-secondary);
+  font-size: 14px;
+  color: var(--color-royal-umber);
+  font-weight: 500;
+}
+
+.calcResult {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-top: 16px;
+  padding-top: 32px;
+  border-top: 0.5px solid var(--color-khufu-stone);
+}
+
+.resultBox {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.installmentValue {
+  font-family: var(--font-primary);
+  font-size: 32px;
+  color: var(--color-royal-umber);
+}
+
+.actionBtn {
+  background-color: transparent;
+  color: var(--color-royal-umber);
+  border: 1px solid var(--color-royal-umber);
+  padding: 16px 32px;
+  font-family: var(--font-secondary);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 11px;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+.actionBtn:hover {
+  background-color: var(--color-royal-umber);
+  color: var(--color-alabaster);
+}

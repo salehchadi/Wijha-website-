@@ -1,0 +1,210 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 32px 64px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+  transition: background-color 0.4s ease, border-bottom 0.4s ease, padding 0.4s ease;
+  border-bottom: 0.5px solid transparent;
+}
+
+.header.scrolled {
+  background-color: rgba(253, 251, 247, 0.85);
+  backdrop-filter: blur(12px);
+  border-bottom: 0.5px solid var(--color-khufu-stone);
+  padding: 24px 64px;
+}
+
+.left {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  flex: 1;
+}
+
+.brand {
+  font-family: var(--font-primary);
+  font-size: 24px;
+  font-weight: 500;
+  letter-spacing: 2px;
+}
+
+.meta {
+  font-family: var(--font-secondary);
+  font-size: 10px;
+  letter-spacing: 1px;
+  color: var(--color-nile-mud);
+  text-transform: uppercase;
+}
+
+.center {
+  display: flex;
+  gap: 48px;
+  flex: 2;
+  justify-content: center;
+}
+
+.center a, .navBtn {
+  font-family: var(--font-secondary);
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  transition: color 0.3s;
+  color: var(--color-nile-mud);
+  font-weight: 500;
+  background: none;
+  border: none;
+  cursor: none; /* custom cursor */
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.center a:hover, .navBtn:hover {
+  color: var(--color-oasis-dawn);
+}
+
+.highlightLink {
+  color: var(--color-royal-umber) !important;
+  border-bottom: 1px solid var(--color-khufu-stone);
+  padding-bottom: 2px;
+}
+
+.right {
+  display: flex;
+  flex: 1;
+  justify-content: flex-end;
+}
+
+.inquireBtn {
+  background: none;
+  border: none;
+  font-family: var(--font-secondary);
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: var(--color-royal-umber);
+  padding-bottom: 4px;
+  border-bottom: 1px solid var(--color-royal-umber);
+  font-weight: 500;
+}
+
+/* Aperture Menu */
+.apertureMenu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 999;
+  display: flex;
+}
+
+.apertureLeft, .apertureRight {
+  width: 50%;
+  height: 100%;
+  background-color: var(--color-alabaster);
+  transition: transform 0.8s cubic-bezier(0.77, 0, 0.175, 1);
+  will-change: transform;
+}
+
+.apertureLeft {
+  transform: translateX(-100%);
+  border-right: 0.5px solid var(--color-khufu-stone);
+  /* Abstract architectural drafting pattern */
+  background-image: linear-gradient(var(--color-khufu-stone) 1px, transparent 1px),
+  linear-gradient(90deg, var(--color-khufu-stone) 1px, transparent 1px);
+  background-size: 40px 40px;
+  background-position: center;
+  opacity: 0.95;
+}
+
+.apertureRight {
+  transform: translateX(100%);
+}
+
+.apertureMenu.open {
+  pointer-events: auto;
+}
+
+.apertureMenu.open .apertureLeft {
+  transform: translateX(0);
+}
+
+.apertureMenu.open .apertureRight {
+  transform: translateX(0);
+}
+
+.inquireContent {
+  padding: 160px 100px;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease 0.4s, transform 0.6s ease 0.4s;
+  max-width: 600px;
+}
+
+.apertureMenu.open .inquireContent {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.inquireContent h2 {
+  font-size: 56px;
+  margin-bottom: 32px;
+  color: var(--color-royal-umber);
+}
+
+.inquireContent p {
+  color: var(--color-nile-mud);
+  margin-bottom: 48px;
+  font-size: 18px;
+}
+
+.formGroup {
+  margin-top: 32px;
+}
+
+.formGroup input {
+  width: 100%;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid var(--color-khufu-stone);
+  padding: 16px 0;
+  font-family: var(--font-secondary);
+  font-size: 14px;
+  outline: none;
+  color: var(--color-royal-umber);
+  transition: border-color 0.3s;
+}
+
+.formGroup input:focus {
+  border-bottom-color: var(--color-nile-mud);
+}
+
+.formGroup input::placeholder {
+  color: #999;
+  letter-spacing: 1px;
+}
+
+.submitBtn {
+  margin-top: 56px;
+  background-color: var(--color-nile-mud);
+  color: var(--color-alabaster);
+  border: none;
+  padding: 20px 40px;
+  font-family: var(--font-secondary);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 12px;
+  transition: background-color 0.3s;
+  font-weight: 500;
+}
+
+.submitBtn:hover {
+  background-color: var(--color-oasis-dawn);
+}
